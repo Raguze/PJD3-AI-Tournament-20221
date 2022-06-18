@@ -13,6 +13,7 @@ namespace ChallengeAI {
     FlagState FlagState {get;}
     Vector3[] PowerUps {get;}
     Vector3[] AmmoRefill {get;}
+    Vector3 StartPosition {get;}
     bool HasFlag {get;}
     float FlagDistance {get;}
     bool IsCooldownFire {get;}

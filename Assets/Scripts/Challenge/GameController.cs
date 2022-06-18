@@ -195,6 +195,7 @@ namespace ChallengeAI
           FlagState       = () => state.FlagState,
           PowerUps        = () => GetEnergyPoints(),
           AmmoRefill      = () => GetAmmoPoints(),
+          StartPosition   = () => new Vector3() + arena.flagInitalPoints[index],
           HasFlag         = () => state.HasFlag.Value,
           HasSightEnemy   = () => state.HasSightEnemy.Value,
           IsCooldownFire  = () => state.IsCooldownFire,
@@ -545,7 +546,7 @@ namespace ChallengeAI
         playerStates.ForEach(ps => {
           var str = fsms[ps.PlayerIndex].CurrentState?.ToString();
           str += "\n"+ps.ToString();
-          str += $"\nEnemyData? >{GetPlayer(ps.PlayerIndex).EnemyData.Length}<";
+          str += $"\nStartPosition {GetPlayer(ps.PlayerIndex).Data.StartPosition}";
           GameEvents.OnHudConsole.Invoke(ps.PlayerIndex,str);
         });
       }

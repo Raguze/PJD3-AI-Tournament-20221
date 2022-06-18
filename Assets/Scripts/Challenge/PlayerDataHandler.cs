@@ -14,6 +14,7 @@ namespace ChallengeAI {
     public Func<FlagState> FlagState;
     public Func<Vector3[]> PowerUps;
     public Func<Vector3[]> AmmoRefill;
+    public Func<Vector3> StartPosition;
     public Func<bool> HasFlag;
     public Func<float> FlagDistance;
     public Func<bool> IsCooldownFire;
@@ -37,6 +38,7 @@ namespace ChallengeAI {
     public FlagState FlagState => delegates.FlagState();
     public Vector3[] PowerUps => delegates.PowerUps();
     public Vector3[] AmmoRefill => delegates.AmmoRefill();
+    public Vector3 StartPosition => delegates.StartPosition();
     public bool HasFlag => delegates.HasFlag();
     public float FlagDistance => delegates.FlagDistance();
     public bool IsCooldownFire => delegates.IsCooldownFire();

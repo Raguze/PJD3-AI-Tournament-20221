@@ -8,7 +8,7 @@ namespace ChallengeAI {
     public float EnergyRespawnTime {get; protected set;} = 8f;
     public float EnergyReplenish {get; protected set;} = 30f;
     public float EnergyPerSecond {get; protected set;} = 6f;
-    public float EnergyRefillPerSecond {get; protected set;} = 3f;
+    public float EnergyRefillPerSecond {get; protected set;} = 5f;
     public float EnergyWaitTimeInitial {get;protected set;} = 3f;
     public float EnergyWaitTime {get;protected set;} = 1f;
     public float FireStopTime {get; protected set;} = 2f;
